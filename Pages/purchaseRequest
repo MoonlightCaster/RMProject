@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Purchase Request — MD SCM System</title>
+	<link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+	<div class="app">
+		<aside class="sidebar" aria-label="Main navigation">
+			<a class="brand" href="md.html">
+				<div class="brand-mark">MD</div>
+				<div class="brand-sub">GRUPPE</div>
+			</a>
+			<nav class="nav">
+				<a class="nav-item" href="md.html#dashboard"><span class="nav-icon">⌂</span><span class="nav-text">Dashboard</span></a>
+				<div class="nav-label">PROCUREMENT</div>
+				<a class="nav-item active" href="purchaseRequest.html" aria-current="page"><span class="nav-icon">▤</span><span class="nav-text">PR (Purchase Request)</span></a>
+				<a class="nav-item" href="md.html#rfq"><span class="nav-icon">▧</span><span class="nav-text">RFQ / Quotation</span></a>
+				<a class="nav-item" href="md.html#vendors"><span class="nav-icon">♧</span><span class="nav-text">Vendor Comparison</span></a>
+				<a class="nav-item" href="md.html#purchase-orders"><span class="nav-icon">▣</span><span class="nav-text">PO (Purchase Order)</span></a>
+				<a class="nav-item" href="md.html#suppliers"><span class="nav-icon">♙</span><span class="nav-text">Suppliers Master</span><span class="new-tag">NEW</span></a>
+				<a class="nav-item" href="md.html#evaluation"><span class="nav-icon">♧</span><span class="nav-text">Supplier Evaluation</span></a>
+				<div class="nav-label">INVENTORY</div>
+				<a class="nav-item" href="md.html#stock"><span class="nav-icon">▦</span><span class="nav-text">Stock Management</span></a>
+				<a class="nav-item" href="md.html#transactions"><span class="nav-icon">⇄</span><span class="nav-text">Stock Transactions</span></a>
+				<a class="nav-item" href="md.html#reports"><span class="nav-icon">▥</span><span class="nav-text">Reports &amp; Analytics</span></a>
+			</nav>
+			<div class="sidebar-bottom">MD SCM System <span class="version-label">v1.0.0</span></div>
+		</aside>
+
+		<main class="main">
+			<header class="topbar">
+				<div class="system-title"><strong>MD SCM SYSTEM</strong><span>Supply Chain Management System</span><span class="version">v1.0.0</span></div>
+				<label class="search"><span>⌕</span><input type="search" placeholder="Search by Item, Transaction, PO No., Supplier..." /></label>
+				<div class="top-actions">
+					<div class="date-block"><span class="date-icon">▦</span><span><strong>May 26, 2026</strong> &nbsp;|&nbsp; Tuesday<br />09:20 AM</span></div>
+					<button class="notification" aria-label="Notifications">♧<b>7</b></button>
+					<div class="profile"><div class="avatar">RM</div><div><strong>Ramil Maravilla</strong><small>SCM Manager</small></div></div>
+				</div>
+			</header>
+
+			<section class="content pr-content">
+				<div class="pr-breadcrumb"><a href="md.html">Dashboard</a> &nbsp;/&nbsp; Procurement &nbsp;/&nbsp; Purchase Request</div>
+				<div class="pr-heading">
+					<div><h1>Purchase Request</h1><p>PR details, customer requirements, and approval tracking</p></div>
+					<span class="pr-status">New Request</span>
+				</div>
+
+				<form>
+					<section class="pr-form-section" aria-labelledby="request-details-title">
+						<h2 id="request-details-title">Request Details</h2>
+						<div class="pr-fields">
+							<div class="pr-field"><label for="pr-number">PR No.</label><input id="pr-number" name="prNumber" type="text" placeholder="Auto-generated" /></div>
+							<div class="pr-field"><label for="pr-date">PR Date</label><input id="pr-date" name="prDate" type="date" /></div>
+							<div class="pr-field"><label for="requestor-id">Requestor ID</label><input id="requestor-id" name="requestorId" type="text" /></div>
+							<div class="pr-field"><label for="requestor-name">Requestor Name</label><input id="requestor-name" name="requestorName" type="text" /></div>
+							<div class="pr-field"><label for="department">Department</label><input id="department" name="department" type="text" /></div>
+							<div class="pr-field"><label for="date-needed">Date Needed</label><input id="date-needed" name="dateNeeded" type="date" /></div>
+							<div class="pr-field"><label for="priority">Priority</label><select id="priority" name="priority"><option value="">Select priority</option><option>Low</option><option>Normal</option><option>High</option><option>Urgent</option></select></div>
+							<div class="pr-field"><label for="status">Status</label><select id="status" name="status"><option value="">Select status</option><option>Draft</option><option>Pending Approval</option><option>Approved</option><option>Rejected</option><option>Ordered</option><option>Received</option></select></div>
+							<div class="pr-field"><label for="date-created">Date Created</label><input id="date-created" name="dateCreated" type="datetime-local" /></div>
+							<div class="pr-field"><label for="last-updated">Last Updated</label><input id="last-updated" name="lastUpdated" type="datetime-local" /></div>
+						</div>
+					</section>
+
+					<section class="pr-form-section" aria-labelledby="customer-details-title">
+						<h2 id="customer-details-title">Customer &amp; Purpose</h2>
+						<div class="pr-fields">
+							<div class="pr-field"><label for="customer-name">Customer Name</label><input id="customer-name" name="customerName" type="text" /></div>
+							<div class="pr-field"><label for="so-number">SO Number</label><input id="so-number" name="soNumber" type="text" /></div>
+							<div class="pr-field"><label for="so-amount">SO Amount</label><input id="so-amount" name="soAmount" type="number" min="0" step="0.01" /></div>
+							<div class="pr-field"><label for="customer-deadline">Customer Deadline</label><input id="customer-deadline" name="customerDeadline" type="date" /></div>
+							<div class="pr-field pr-field-wide"><label for="purpose">Purpose</label><textarea id="purpose" name="purpose"></textarea></div>
+							<div class="pr-field pr-field-wide"><label for="remarks">Remarks</label><textarea id="remarks" name="remarks"></textarea></div>
+						</div>
+					</section>
+
+					<section class="pr-form-section" aria-labelledby="approval-title">
+						<h2 id="approval-title">Approval &amp; Procurement</h2>
+						<div class="pr-fields">
+							<div class="pr-field"><label for="prepared-by">Prepared By</label><input id="prepared-by" name="preparedBy" type="text" /></div>
+							<div class="pr-field"><label for="checked-by">Checked By</label><input id="checked-by" name="checkedBy" type="text" /></div>
+							<div class="pr-field"><label for="approved-by">Approved By</label><input id="approved-by" name="approvedBy" type="text" /></div>
+							<div class="pr-field"><label for="approval-date">Approval Date</label><input id="approval-date" name="approvalDate" type="date" /></div>
+							<div class="pr-field"><label for="received-by-procurement">Received By Procurement</label><input id="received-by-procurement" name="receivedByProcurement" type="text" /></div>
+						</div>
+					</section>
+
+					<div class="pr-actions">
+						<a class="pr-back" href="md.html">← Back to dashboard</a>
+						<button class="pr-save" type="submit">Save Purchase Request</button>
+					</div>
+				</form>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
