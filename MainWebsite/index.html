@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD SCM System — Dashboard</title>
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand"><div class="brand-mark">MD</div><div class="brand-sub">GRUPPE</div></div>
+      <nav class="nav">
+        <a class="nav-item active" href="#dashboard"><span class="nav-icon">⌂</span><span class="nav-text">Dashboard</span></a>
+        <div class="nav-label">PROCUREMENT</div>
+        <a class="nav-item" href="purchaseRequest.html"><span class="nav-icon">▤</span><span class="nav-text">PR (Purchase Request)</span></a>
+        <a class="nav-item" href="#rfq"><span class="nav-icon">▧</span><span class="nav-text">RFQ / Quotation</span></a>
+        <a class="nav-item" href="#vendors"><span class="nav-icon">♧</span><span class="nav-text">Vendor Comparison</span></a>
+        <a class="nav-item" href="#purchase-orders"><span class="nav-icon">▣</span><span class="nav-text">PO (Purchase Order)</span></a>
+        <a class="nav-item" href="#suppliers"><span class="nav-icon">♙</span><span class="nav-text">Suppliers Master</span><span class="new-tag">NEW</span></a>
+        <a class="nav-item" href="#evaluation"><span class="nav-icon">♧</span><span class="nav-text">Supplier Evaluation</span></a>
+        <div class="nav-label">INVENTORY</div>
+        <a class="nav-item" href="#stock"><span class="nav-icon">▦</span><span class="nav-text">Stock Management</span></a>
+        <a class="nav-item" href="#transactions"><span class="nav-icon">⇄</span><span class="nav-text">Stock Transactions</span></a>
+        <a class="nav-item" href="#reports"><span class="nav-icon">▥</span><span class="nav-text">Reports & Analytics</span></a>
+      </nav>
+      <div class="sidebar-bottom">MD SCM System <span class="version-label">v1.0.0</span></div>
+    </aside>
+
+    <main class="main" id="dashboard">
+      <header class="topbar">
+        <div class="system-title"><strong>MD SCM SYSTEM</strong><span>Supply Chain Management System</span><span class="version">v1.0.0</span></div>
+        <label class="search"><span>⌕</span><input type="search" placeholder="Search by Item, Transaction, PO No., Supplier..." /></label>
+        <div class="top-actions">
+          <div class="date-block"><span class="date-icon">▦</span><span><strong>May 26, 2026</strong> &nbsp;|&nbsp; Tuesday<br />09:20 AM</span></div>
+          <button class="notification" aria-label="Notifications">♧<b>7</b></button>
+          <div class="profile"><div class="avatar">RM</div><div><strong>Ramil Maravilla</strong><small>SCM Manager</small></div></div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="welcome-row">
+          <div class="welcome"><h1>Good morning, Ramil! <span aria-hidden="true">👋</span></h1><p>Welcome back to MD SCM System</p></div>
+          <div class="period-tools"><span>Select Period:</span><button class="select-period"><span>▦</span> May 1 – May 26, 2026 <span>⌄</span></button><button class="refresh" onclick="this.innerHTML='✓ Refreshed'; setTimeout(() => this.innerHTML='⟳ Refresh Data', 1200)">⟳ &nbsp;Refresh Data</button></div>
+        </div>
+
+        <section class="metrics" aria-label="Dashboard metrics">
+          <article class="metric metric-inventory"><div class="metric-icon">⬡</div><div class="metric-copy"><div class="metric-label">TOTAL INVENTORY VALUE</div><div class="metric-value">₱ 13,326,540.25</div><div class="metric-note"><span class="up">▲ 8.25%</span> &nbsp;vs Apr 2026</div><svg class="sparkline" viewBox="0 0 100 18" preserveAspectRatio="none"><polyline points="0,15 12,13 22,14 32,10 42,12 53,7 62,9 72,5 82,7 91,2 100,4" fill="none" stroke="#3676f6" stroke-width="1.7" /></svg></div></article>
+          <article class="metric metric-items"><div class="metric-icon">⬡</div><div class="metric-copy"><div class="metric-label">TOTAL ITEMS</div><div class="metric-value">3,482</div><div class="metric-note">Active Items</div><svg class="sparkline" viewBox="0 0 100 18" preserveAspectRatio="none"><polyline points="0,15 12,12 22,14 33,9 43,11 53,6 63,8 73,4 82,7 92,2 100,4" fill="none" stroke="#21b86e" stroke-width="1.7" /></svg></div></article>
+          <article class="metric metric-stock-in"><div class="metric-icon">⇩</div><div class="metric-copy"><div class="metric-label">TOTAL STOCK IN</div><div class="metric-value">₱ 4,825,600.00</div><div class="metric-note"><span class="up">▲ 12.45%</span> &nbsp;vs Apr 2026</div><svg class="sparkline" viewBox="0 0 100 18" preserveAspectRatio="none"><polyline points="0,15 13,14 22,11 34,12 44,9 53,10 65,6 73,8 83,4 91,6 100,2" fill="none" stroke="#ff7b32" stroke-width="1.7" /></svg></div></article>
+          <article class="metric metric-stock-out"><div class="metric-icon">⇧</div><div class="metric-copy"><div class="metric-label">TOTAL STOCK OUT</div><div class="metric-value">₱ 3,912,430.00</div><div class="metric-note"><span class="up">▲ 6.18%</span> &nbsp;vs Apr 2026</div><svg class="sparkline" viewBox="0 0 100 18" preserveAspectRatio="none"><polyline points="0,13 11,15 23,10 34,13 43,8 54,11 63,6 74,9 84,4 92,7 100,2" fill="none" stroke="#fa3d45" stroke-width="1.7" /></svg></div></article>
+          <article class="metric metric-low-stock"><div class="metric-icon">⚠</div><div class="metric-copy"><div class="metric-label">LOW STOCK ITEMS</div><div class="metric-value">128</div><div class="metric-note"><span class="alert">Needs Attention</span></div></div></article>
+          <article class="metric metric-out-of-stock"><div class="metric-icon">!</div><div class="metric-copy"><div class="metric-label">OUT OF STOCK</div><div class="metric-value">35</div><div class="metric-note"><span class="alert">Critical</span></div></div></article>
+        </section>
+
+        <section class="lower-grid">
+          <article class="panel quick-panel"><div class="panel-heading"><h2>QUICK ACCESS <small>(Create New)</small></h2><button class="panel-link">View all →</button></div><div class="quick-actions">
+            <a class="quick-action" href="#purchase-requests"><span class="quick-icon">＋</span><span><strong>Purchase Request</strong><small>Create a new request</small></span></a>
+            <a class="quick-action" href="#purchase-orders"><span class="quick-icon">▣</span><span><strong>Purchase Order</strong><small>Issue an order</small></span></a>
+            <a class="quick-action" href="#stock"><span class="quick-icon">⇄</span><span><strong>Stock Transaction</strong><small>Record stock movement</small></span></a>
+          </div></article>
+          <article class="panel"><div class="panel-heading"><h2>ALERTS &amp; NOTIFICATIONS</h2><button class="panel-link">View All</button></div>
+            <div class="alert-row"><span class="alert-dot"></span><div><strong>Low stock items need attention</strong><small>128 items are below reorder level · 10 min ago</small></div></div>
+            <div class="alert-row"><span class="alert-dot alert-dot-warning"></span><div><strong>Purchase request pending approval</strong><small>3 requests awaiting review · 1 hour ago</small></div></div>
+            <div class="alert-row"><span class="alert-dot alert-dot-info"></span><div><strong>New supplier registered</strong><small>Acme Industrial Supply · Yesterday</small></div></div>
+          </article>
+          <article class="panel"><div class="panel-heading"><h2>RECENT ACTIVITIES</h2><button class="panel-link">View All</button></div>
+            <div class="activity-row"><span class="activity-icon">↓</span><div><strong>PO-26-00987 received 60 pcs</strong><small>Industrial safety gloves · 09:12 AM</small></div></div>
+            <div class="activity-row"><span class="activity-icon activity-icon-blue">＋</span><div><strong>New purchase request created</strong><small>PR-26-00421 · 08:54 AM</small></div></div>
+            <div class="activity-row"><span class="activity-icon activity-icon-orange">⇧</span><div><strong>Stock issued to Production</strong><small>12 items · Yesterday</small></div></div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll('.nav-item').forEach((item) => {
+      item.addEventListener('click', () => {
+        document.querySelector('.nav-item.active')?.classList.remove('active');
+        item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
